@@ -1,6 +1,5 @@
-import MM.markets.BfxTrade as bfx
-import MM.markets.PoloTrade as polo
-import time
+import markets.BfxTrade as bfx
+import markets.PoloTrade as polo
 
 exchanges = [polo, bfx]
 count = 0
