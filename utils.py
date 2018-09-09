@@ -3,7 +3,7 @@ import markets.PoloTrade as polo
 
 
 def dif(bid, ask):
-    return (100 / bid * ask) - 100
+    return (100 / ask * bid) - 100
 
 
 def compare(dt, count, bfx, polo):
