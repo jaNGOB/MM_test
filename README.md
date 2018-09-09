@@ -1,12 +1,12 @@
 # MM_test
 
-We scan two exchanges with the help of CCXT and see if we can find arbitrage-opportunities between then. In the best case we can profit off of them!
+It scans two exchanges with the help of CCXT and sees if it can find arbitrage-opportunities between them.
 
 # Example
 Balances Exchange A = BTC: 0.1 and USD: 600 \
-Balances Exchange B = BTC: 0.1 and Usd: 600 
+Balances Exchange B = BTC: 0.1 and USD: 600 
 
-We compare the best bid and ask from both the exchanges and when we see a high difference we buy. 
+It compares the best bid and ask from both the exchanges and if it sees a high difference it trades. 
 
 Bid Exchange A = 6000 \
 Ask Exchange B = 5900
@@ -17,7 +17,7 @@ Now our Balances look like this:
 Balances Exchange A = BTC: 0.0    and USD: 1'200 \
 Balances Exchange B = BTC: 0.2017 and USD: 0
 
-Now we have to wait for a reverse opportunity to exchange it back or just split our orders into smaller pieces.
+Now we have to wait for a reverse opportunity to exchange it back or just split our orders into smaller pieces to profit off of future trades.
 
 # To-Do
 Right now there is only the scanning part in place, meaning no orders or order-management happening. 
