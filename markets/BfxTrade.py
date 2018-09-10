@@ -7,12 +7,14 @@ exchange = ccxt.bitfinex({
     'apiKey': '',
     'secret': '',
     'enableRateLimit': True,
+    'timeout': 30000,
     'rateLimit': 3000
 })
 
 orderbook = {}
 
 # -----------------------------------------------------------------------------
+
 
 def makeOrderbook(orderbook, pairs):
     for pair in pairs:
