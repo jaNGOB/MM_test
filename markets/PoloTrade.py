@@ -26,7 +26,10 @@ def makeOrderbook(orderbook, pairs):
 def fetchOB(symbol):
     try:
         ticker = exchange.fetch_order_book(symbol)
-        return ticker
+        if ticker is None:
+            fetchOB(symbol)
+        else:
+            return ticker
 
     except (ccxt.ExchangeError, ccxt.AuthenticationError, ccxt.ExchangeNotAvailable, ccxt.RequestTimeout) as error:
         print('Got an error', type(error).__name__, error.args, ', retrying in 30 seconds...')
