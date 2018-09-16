@@ -13,7 +13,7 @@ def compare(dt, count, bfx, polo, verbose=False):
     poloBid = polo['ETHBTC']['bids']['price']
     poloAsk = polo['ETHBTC']['asks']['price']
 
-    if (bfxBid > poloAsk) and (dif(bfxBid, poloAsk) > 0.5):
+    if (bfxBid > poloAsk) and (dif(bfxBid, poloAsk) >= 0.5):
         print(dt, 'BFX Bid > POLO ASK')
         print(bfxBid, poloAsk)
         f = open('trades.txt', 'a+')
@@ -23,7 +23,7 @@ def compare(dt, count, bfx, polo, verbose=False):
         f.write('Profit: {} \n'.format(dif(bfxBid, poloAsk)))
         f.close()
 
-    elif poloBid > bfxAsk and (dif(poloBid, bfxAsk) > 0.5):
+    elif (poloBid > bfxAsk) and (dif(poloBid, bfxAsk) >= 0.5):
         print(dt, 'POLO Bid > BFX ASK')
         print(poloBid, bfxAsk)
         f = open('trades.txt', 'a+')
