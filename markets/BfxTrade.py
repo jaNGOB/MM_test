@@ -28,7 +28,7 @@ def makeOrderbook(orderbook, pairs):
 def fetchOB(symbol):
     try:
         ticker = exchange.fetch_order_book(symbol)
-        if ticker is None:
+        if isinstance(ticker, type(None)):
             fetchOB(symbol)
         else:
             return ticker
